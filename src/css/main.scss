@@ -1,0 +1,12 @@
+/* base */
+@use "base/base";
+
+/* components */
+@use "components/button";
+
+/* layout */
+@use "layout/layout"; 
+
+/* pages */
+@use "pages/index";
+@use "pages/SASS";

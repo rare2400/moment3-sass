@@ -1,0 +1,26 @@
+/* general layout styles */
+@use "../abstracts/variables";
+
+
+body {
+    background-color: variables.$background-color;
+  }
+  
+  header {
+    background-color: variables.$header-color;
+
+    li {
+        list-style-type: none;
+    }
+
+    a {
+        color: variables.$light-text;
+        text-decoration: none;
+    }
+    
+  }
+
+  footer {
+    background-color: variables.$header-color;
+    color: variables.$light-text;
+  }
