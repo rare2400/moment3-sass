@@ -1,0 +1,7 @@
+/* index-page styles */
+@use "../abstracts/placeholders";
+
+img {
+    @extend %box-shadow;
+    margin: 2rem;
+}

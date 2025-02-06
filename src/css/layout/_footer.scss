@@ -1,0 +1,7 @@
+@use "../abstracts/variables";
+
+/* footer */
+footer {
+    background-color: variables.$header-color;
+    color: variables.$light-text;
+  }

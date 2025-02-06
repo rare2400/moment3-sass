@@ -1,12 +1,17 @@
 /* base */
-@use "base";
+@use "./base/base";
+@use "./base/reset";
 
 /* components */
-@use "button";
+@use "./components/button";
 
 /* layout */
-@use "layout"; 
+@use "./layout/layout";
+@use "./layout/header";
+@use "./layout/footer";
+@use "./layout/navigation";
+
 
 /* pages */
-@use "index";
-@use "SASS"; 
+@use "./pages/index";
+@use "./pages/SASS";

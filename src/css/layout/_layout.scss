@@ -1,0 +1,14 @@
+/* general layout styles */
+@use "../abstracts/variables";
+
+
+body {
+  background-color: variables.$background-color;
+}
+
+h1 a {
+  color: variables.$light-text;
+}
+
+
+
