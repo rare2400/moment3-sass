@@ -9,13 +9,19 @@ body {
 header {
   background-color: variables.$header-color;
 
-  li {
-    list-style-type: none;
-  }
+  nav {
+    position: absolute;
+    right: 0;
+    top: 0;
 
-  a {
-    color: variables.$light-text;
-    text-decoration: none;
+    li {
+      list-style-type: none;
+    }
+
+    a {
+      color: variables.$light-text;
+      text-decoration: none;
+    }
   }
 
 }

@@ -1,0 +1,7 @@
+@mixin box-shadow($top, $left, $blur, $spread, $color, $inset: false) {
+    @if $inset {
+        box-shadow: $top, $left, $blur, $spread, $color, inset;
+    } @else {
+        box-shadow: $top, $left, $blur, $spread, $color;
+    }
+}
