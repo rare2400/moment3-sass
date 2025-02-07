@@ -4,9 +4,9 @@
 
 /* components */
 @use "./components/button";
+@use "./components/menuBtns"; 
 
 /* layout */
-@use "./layout/layout";
 @use "./layout/header";
 @use "./layout/footer";
 @use "./layout/navigation";

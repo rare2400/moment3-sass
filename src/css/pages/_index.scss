@@ -1,5 +1,7 @@
 /* index-page styles */
+@use "../abstracts/variables";
 @use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
 .images {
     @extend %box-shadow;
@@ -15,3 +17,12 @@
         box-shadow: none;
     }
 }
+
+/* style för större skärmar */
+@media (min-width: variables.$breakpoint) {
+    .image-box {
+      @include mixins.grid;
+      max-width: variables.$breakpoint;
+      margin: 1.5rem auto;
+    }
+  }

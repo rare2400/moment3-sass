@@ -1,0 +1,14 @@
+//mixin för grid
+@mixin grid ($columns: 2) {
+    display: grid;
+    grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin textBox($width, $border: 0) {
+    width: $width;
+    
+
+    @if $border != 0 {
+        border: $border;
+    }
+}
