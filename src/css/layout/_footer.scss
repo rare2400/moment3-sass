@@ -1,7 +1,10 @@
 @use "../abstracts/variables";
+@use "../abstracts/placeholders";
 
 /* footer */
 footer {
     background-color: variables.$header-color;
     color: variables.$light-text;
+    padding: 1rem;
+    @extend %centermargin
   }

@@ -1,6 +1,9 @@
 @use "../abstracts/variables";
+@use "../abstracts/placeholders";
 
 /* header */
 header {
     background-color: variables.$header-color;
-  }
+    @extend %grid;
+    height: 3rem;
+}
