@@ -1,7 +1,17 @@
 /* index-page styles */
 @use "../abstracts/placeholders";
 
-img {
+.images {
     @extend %box-shadow;
-    margin: 2rem;
+    width: 80%;
+    margin: 0 auto 0.8rem;
+}
+
+.image-box {
+    @extend %centermargin;
+    
+    p {
+        @extend .images;
+        box-shadow: none;
+    }
 }
