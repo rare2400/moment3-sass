@@ -4,9 +4,10 @@
     grid-template-columns: repeat($columns, 1fr);
 }
 
-@mixin textBox($width, $border: 0) {
+@mixin textBox($width, $padding, $margin, $border: 0) {
     width: $width;
-    
+    margin: $margin;
+    padding: $padding;
 
     @if $border != 0 {
         border: $border;
