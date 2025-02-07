@@ -1,0 +1,32 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+
+
+body {
+    background-color: variables.$background-color;
+}
+
+h1 a {
+    color: variables.$light-text;
+}
+
+h2,
+h3 {
+    @extend %centermargin;
+}
+
+/* media queries för mörkt tema */
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: variables.$dark-background;
+        color: variables.$dark-text;
+
+
+        header, footer {
+            background-color: variables.$dark-header-color;
+        }
+    }
+    .open, .close, nav {
+        @extend header
+    }
+}

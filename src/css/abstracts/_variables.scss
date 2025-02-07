@@ -6,12 +6,12 @@ $dark-text: #000;
 $light-text: #f1edea;
 
 /* motsatsfärger till mörkt tema */
+$dark-header-color: darken(#2F4156, 20%);
+$dark-background: #2d2d2d;
+$dark-text: #fff;
 
 /* fonts */
 $font-stack: 'Arial', sans-serif;
-
-/* sizes */
-$full-width: 100%;
 
 /* breakpoints */
 $breakpoint: 50rem;
