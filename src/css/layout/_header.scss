@@ -1,9 +1,10 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
 /* header */
 header {
     background-color: variables.$header-color;
-    @extend %grid;
+    @include mixins.grid;
     height: 3rem;
 }
