@@ -4,6 +4,7 @@
 
 body {
     background-color: variables.$background-color;
+    font-family: variables.$font-stack;
 }
 
 h1 a {
@@ -28,5 +29,10 @@ h3 {
     }
     .open, .close, nav {
         @extend header
+    }
+
+    .sass-content {
+        background-color: variables.$text-background;
+        border-color: variables.$light-text;
     }
 }
