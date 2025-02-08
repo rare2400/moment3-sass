@@ -4,6 +4,7 @@
 @use "../abstracts/variables";
 
 .sass-content {
-    @include mixins.textBox(90%, 0 1rem 1rem, 1rem auto, 1px solid rgba(0, 0, 0, 0.5));
-    @extend %box-shadow
+    @include mixins.textBox(90%, 0 1rem 1rem, 1rem auto, 2px solid rgb(137, 137, 137));
+    @extend %box-shadow;
+    max-width: variables.$breakpoint;
 }
