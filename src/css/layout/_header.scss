@@ -8,3 +8,15 @@ header {
     @include mixins.grid;
     height: 3rem;
 }
+
+/* bigger screens */
+@media (min-width: variables.$breakpoint) {
+    header {
+        height: 5rem;
+        @include mixins.grid(3);
+
+        h1 {
+            margin: auto;
+        }
+    }
+}

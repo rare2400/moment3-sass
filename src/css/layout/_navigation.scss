@@ -1,24 +1,44 @@
 @use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
 
 /* navigation */
 nav {
-    position: absolute;
-    right: 0;
-    top: 0;
-    background-color: variables.$header-color;
-    width: 50%;
-    display: none;
-  
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-color: variables.$header-color;
+  width: 50%;
+  display: none;
+
+  ul {
+    text-align: center;
+  }
+
+  li {
+    list-style-type: none;
+    padding: 1rem;
+  }
+
+  a {
+    color: variables.$light-text;
+  }
+}
+
+/* nav-menu on bigger screens */
+@media (min-width: variables.$breakpoint) {
+  nav {
+    display: block !important;
+    position: static;
+    grid-column: 2/4;
+    box-shadow: 0;
+    width: auto;
+    margin: auto;
+    justify-self: end;
+
     ul {
-      text-align: center;
-    }
-  
-    li {
-      list-style-type: none;
-      padding: 1rem;
-    }
-  
-    a {
-      color: variables.$light-text;
+      display: flex;
+      flex-wrap: nowrap;
     }
   }
+}
