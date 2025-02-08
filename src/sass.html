@@ -46,11 +46,58 @@
             <section class="sass-content">
                 <h2>Moment 3 - SASS</h2>
                 <div class="text-box">
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos alias maxime, culpa praesentium
-                        perferendis quia ad nobis dolorum pariatur, cupiditate delectus aut perspiciatis, architecto
-                        veniam possimus. Expedita praesentium atque beatae? Lorem ipsum dolor sit amet consectetur
-                        adipisicing elit. Id aliquam porro ducimus, beatae voluptatum totam, eum vel quam reprehenderit
-                        doloremque minima obcaecati natus consequatur, excepturi cumque sunt molestiae ea? Explicabo.
+                    <p>Till en början var det svårt att veta hur man skulle strukturera upp alla mappar och scss-filer i
+                        arbetet. Det var mycket fundering med att lägga till och ta bort filer innan jag hittade en
+                        struktur som passade mig och mitt arbete. En utmaning har varit att veta var man skulle placera
+                        koden för de olika delarna, till exempel klurade jag mycket på var stylingen på själva
+                        innehållet på de olika sidorna skulle vara. Det första jag gjorde var att helt och hållet ta
+                        strukturen som stod på 7-1-sidan men kom snabbt fram till att det kanske inte riktigt passade
+                        min nivå med detta arbete. Till slut kom jag fram till att det kunde finnas en mapp “pages” som
+                        kunde innehålla filer med namnen på olika sidorna där deras layout kunde stylas, istället för
+                        att ha en “layout”-partial i mappen “layout”. Själva kodandet med utseendet på komponenterna har
+                        varit relativt enkelt att förstå, men ibland har man fått fundera över var, när och hur man ska
+                        använda sig av mixins, variabler eller placeholders/inheritance.
+                    </p><br>
+                    <p>
+                        När det kommer till fördelar och nackdelar med SASS så såg jag till en början mer nackdelar, men
+                        det växte på mig och nu förstår jag mer syftet med det. Fördelen med att dela upp scss-filerna i
+                        partials är att det är lätt att hitta i sin kod när man ska ändra eller lägga till något,
+                        speciellt eftersom varje fil har mindre kod än vad en hel css-fil har. Även om jag tidigare har
+                        strukturerat min css-kod och delat upp den så har den legat på så många rader att det ändå
+                        blivit jobbigt och krångligt att hitta. En nackdel som jag märkt av med partials har varit att
+                        man ska hålla koll på att inkludera filerna med variabler, mixins och inheritance i den filen
+                        som man vill använda dessa metoder för att styla. Ibland glömmer man av det eller att skriva
+                        filnamnet innan själva variabeln/mixin/extend, vilket gör att man fastnar en stund innan man
+                        inser vad man har missat i koden för att det ska fungera. Det har lett till att arbetet tagit
+                        lite längre tid än väntat, och det är frustrerande att fastna ofta när det är så små fel.
+                        Metoden för hur man använder metoderna är också olika, till exempel så behöver man inte skriva
+                        filnamnet innan @extend namnet, men det behöver man på variablerna och det kan vara lite
+                        förvirrande ibland. Från detta tar jag dock med mig att direkt lägga in @use för filerna med
+                        mixins, variabler och placeholders så jag inte ska behöva tänka på just den delen.
+                    </p><br>
+                    <p>
+                        Att kunna använda sig av variabler, mixins och placeholders/extend har varit lärorikt och man
+                        insåg snabbt att det underlättar mycket, både tidsmässigt och kodmässigt. Från en css med över
+                        800 rader så delas all kod upp och när man gått in och kolla på css-filen i dist-mappen så ser
+                        koden även där mer städad ut. Den webbplatsen som jag har skapat nu är relativt liten så det har
+                        inte krävts så mycket återanvändning av koden på flera ställen. Men på de ställen där man har
+                        det, så har det underlättat mycket att kunna lägga in en @mixin eller @extend för liknande delar
+                        i stylingen. En utmaning har varit att lista ut vilken av metoderna som är optimal att använda i
+                        olika situationer och ibland testade jag båda för att se vad som kändes bäst. Jag tittade även
+                        mycket i den kompilerade css-filen i dist hur koden blev när den var utskriven, och där kändes
+                        extend mest tilltalande eftersom den skapar mindre redundans. Däremot är det en stor fördel med
+                        mixins att man kan skicka med argument i funktionerna för att anpassa stylingen på olika sätt,
+                        samt använda olika kontrollmetoder som if, else, each etcetera. Något som jag också märkte av
+                        som jag blev lite besviken var att det inte fungerade att använda inheritance inuti media
+                        queries, vilket hade kunnat göra koden ytterligare DRY (Don’t Repeat Yourself)
+                    </p><br>
+                    <p>
+                        Sammanfattningsvis så har det varit en utmaning att lära sig och utveckla webbplatsen med SASS,
+                        men under tidens gång har det växt på mig och det känns som det kan underlätta mycket i ens
+                        arbete. Det finns mycket fördelar med att använda sig av SASS och med tidens gång, när man mer
+                        kommit in mer i arbetssättet, så tror jag att nackdelarna kommer bli färre. Speciellt sånt som
+                        att missa filnamnet från den importerade variabeln.
+
                     </p>
                 </div>
             </section>
