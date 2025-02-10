@@ -1,0 +1,42 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+/* header */
+header {
+    background-color: variables.$header-color;
+    @include mixins.grid;
+    height: 3rem;
+}
+
+/* navigation */
+nav {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: variables.$header-color;
+    width: 50%;
+    display: none;
+  
+    ul {
+      text-align: center;
+    }
+  
+    li {
+      list-style-type: none;
+      padding: 1rem;
+    }
+  
+    a {
+      color: variables.$light-text;
+      text-decoration: none;
+    }
+  }
+
+/* footer */
+footer {
+    background-color: variables.$header-color;
+    color: variables.$light-text;
+    padding: 1rem;
+    @extend %centermargin
+  }

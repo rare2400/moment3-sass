@@ -15,24 +15,3 @@ h2,
 h3 {
     @extend %centermargin;
 }
-
-/* media queries för mörkt tema */
-@media (prefers-color-scheme: dark) {
-    body {
-        background-color: variables.$dark-background;
-        color: variables.$dark-text;
-
-
-        header, footer {
-            background-color: variables.$dark-header-color;
-        }
-    }
-    .open, .close, nav {
-        @extend header
-    }
-
-    .sass-content {
-        background-color: variables.$text-background;
-        border-color: variables.$light-text;
-    }
-}

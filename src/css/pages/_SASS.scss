@@ -7,11 +7,3 @@
     @include mixins.textBox(90%, 0 1rem 1rem, 1rem auto, 2px solid rgb(137, 137, 137));
     @extend %box-shadow;
 }
-
-/* style för större skärmar */
-@media (min-width: variables.$breakpoint) {
-    .sass-content {
-      max-width: variables.$breakpoint;
-      padding: 1rem 3rem;
-    }
-  }
