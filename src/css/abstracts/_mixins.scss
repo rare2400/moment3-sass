@@ -16,7 +16,7 @@
     }
 }
 
-@mixin button($bg-color, $text-color, $padding, $margin, $textalign, $fontsize, $border: false) {
+@mixin button($bg-color, $text-color, $padding, $margin, $max-w, $textalign, $fontsize, $border: false) {
     @if $border ==true {
         background-color: $bg-color;
         color: $text-color;
@@ -39,6 +39,7 @@
 
     padding: $padding;
     margin: $margin;
+    max-width: $max-w;
     text-align: $textalign;
     font-size: $fontsize;
     cursor: pointer;
