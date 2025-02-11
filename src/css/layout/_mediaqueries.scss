@@ -4,8 +4,7 @@
 /* media queries för större skärmar */
 @media (min-width: variables.$breakpoint) {
     header {
-        height: 5rem;
-        @include mixins.grid(3);
+        @include mixins.grid(5rem, 3);
 
         h1 {
             margin: auto;
@@ -39,7 +38,7 @@
 
     /* index */
     .image-box {
-        @include mixins.grid;
+        @include mixins.grid(auto, 2);
         max-width: variables.$breakpoint;
         margin: 1.5rem auto;
     }

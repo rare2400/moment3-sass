@@ -4,9 +4,8 @@
 
 /* header */
 header {
+  @include mixins.grid(3rem, 2);
     background-color: variables.$header-color;
-    @include mixins.grid;
-    height: 3rem;
 }
 
 /* navigation */
