@@ -1,3 +1,5 @@
+@use "../abstracts/variables";
+
 //mixin för grid
 @mixin grid ($columns: 2) {
     display: grid;
@@ -9,7 +11,35 @@
     margin: $margin;
     padding: $padding;
 
-    @if $border != 0 {
+    @if $border !=0 {
         border: $border;
     }
+}
+
+@mixin button($bg-color, $text-color, $padding, $margin, $textalign, $fontsize, $border: false) {
+    @if $border ==true {
+        background-color: $bg-color;
+        color: $text-color;
+        border: 2px solid $text-color;
+        
+        &:hover {
+            background-color: transparent;
+        }
+    }
+
+    @else {
+        background-color: $bg-color;
+        color: $text-color;
+        border: none;
+
+        &:hover {
+            background-color: lighten($bg-color, 20%);
+        }
+    }
+
+    padding: $padding;
+    margin: $margin;
+    text-align: $textalign;
+    font-size: $fontsize;
+    cursor: pointer;
 }

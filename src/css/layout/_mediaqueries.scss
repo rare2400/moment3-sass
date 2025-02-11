@@ -66,6 +66,10 @@
         }
     }
 
+    .button {
+        @include mixins.button(variables.$dark-header-color, variables.$white, variables.$default-padding, 0 40%, center, 1.2rem, true)
+    }
+
     .sass-content {
         background-color: variables.$text-background;
         border-color: variables.$light-text;

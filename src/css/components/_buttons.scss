@@ -1,0 +1,59 @@
+@use "../abstracts/variables";
+@use "../abstracts/placeholders";
+@use "../abstracts/mixins";
+
+/* menu icon */
+/* hamburgermeny */
+.menu-btn {
+    justify-self: end;
+    display: flex;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.open {
+    background-color: variables.$header-color;
+    padding: 0 1rem;
+}
+
+.menu-icon {
+    margin-right: 0.625rem;
+}
+
+/* the three bars that makes the hamburger-icon */
+.bars {
+    display: block;
+    width: 20px;
+    height: 3px;
+    background-color: variables.$light-text;
+    margin: 5px 0;
+}
+
+.menu-text {
+    font-size: 1.2rem;
+    color: variables.$light-text;
+}
+
+/* menybutton, close */
+.close {
+    @extend .open;
+    padding-top: 1rem;
+}
+
+.cross1 {
+    width: 25px;
+    transform: rotate(45deg);
+    position: relative;
+    top: 5px;
+}
+
+.cross2 {
+    @extend .cross1;
+    transform: rotate(135deg);
+    top: -3px;
+}
+
+.button {
+   @include mixins.button(variables.$header-color, variables.$light-text, variables.$default-padding, 0 40%, center, 1.2rem, false) 
+}
