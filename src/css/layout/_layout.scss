@@ -24,7 +24,7 @@ nav {
   
     li {
       list-style-type: none;
-      padding: 1rem;
+      padding: variables.$default-padding;
     }
   
     a {
@@ -37,6 +37,6 @@ nav {
 footer {
     background-color: variables.$header-color;
     color: variables.$light-text;
-    padding: 1rem;
+    padding: variables.$default-padding;
     @extend %centermargin
   }
