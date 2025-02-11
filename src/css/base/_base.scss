@@ -1,14 +1,27 @@
 @use "../abstracts/variables";
 @use "../abstracts/placeholders";
 
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
     background-color: variables.$background-color;
     font-family: variables.$font-stack;
+    line-height: 1.5rem;
 }
 
-h1 a {
-    color: variables.$light-text;
+h1 {
+    font-size: 2rem;
+    margin-left: 1rem;
+
+    a {
+        color: variables.$light-text;
+        text-decoration: none;
+    }
 }
 
 h2,
