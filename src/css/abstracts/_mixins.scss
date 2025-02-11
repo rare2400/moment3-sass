@@ -1,11 +1,13 @@
 @use "../abstracts/variables";
 
 //mixin för grid
-@mixin grid ($columns: 2) {
+@mixin grid ($height, $columns: 2) {
     display: grid;
     grid-template-columns: repeat($columns, 1fr);
+    height: $height;
 }
 
+//mixin för textbox
 @mixin textBox($width, $padding, $margin, $border: 0) {
     width: $width;
     margin: $margin;
@@ -15,7 +17,7 @@
         border: $border;
     }
 }
-
+//mixin för knappar
 @mixin button($bg-color, $text-color, $padding, $margin, $max-w, $textalign, $fontsize, $border: false) {
     @if $border ==true {
         background-color: $bg-color;
@@ -43,4 +45,13 @@
     text-align: $textalign;
     font-size: $fontsize;
     cursor: pointer;
+}
+
+//mixin för hamburger-icon
+@mixin menu-icon($display, $width, $height, $bg-color, $margin) {
+    display: $display;
+    width: $width;
+    height: $height;
+    background-color: $bg-color;
+    margin: $margin;
 }

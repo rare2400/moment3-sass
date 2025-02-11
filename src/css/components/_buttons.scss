@@ -23,11 +23,7 @@
 
 /* the three bars that makes the hamburger-icon */
 .bars {
-    display: block;
-    width: 20px;
-    height: 3px;
-    background-color: variables.$light-text;
-    margin: 5px 0;
+    @include mixins.menu-icon(block, 20px, 3px, variables.$light-text, 5px 0)
 }
 
 .menu-text {
@@ -38,7 +34,7 @@
 /* menybutton, close */
 .close {
     @extend .open;
-    padding-top: 1rem;
+    padding-top: variables.$default-padding;
 }
 
 .cross1 {
