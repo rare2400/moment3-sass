@@ -2,7 +2,6 @@
 @use "../abstracts/mixins";
 
 /* media queries för större skärmar */
-/* nav-menu on bigger screens */
 @media (min-width: variables.$breakpoint) {
     header {
         height: 5rem;
@@ -13,6 +12,16 @@
         }
     }
 
+    /* nav-buttons */
+    .menu-btn {
+        display: none;
+    }
+
+    #open-menu {
+        display: none !important;
+    }
+
+    /* nav-menu on bigger screens */
     nav {
         display: block !important;
         position: static;
