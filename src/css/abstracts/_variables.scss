@@ -7,9 +7,9 @@ $light-text: #f1edea;
 
 /* motsatsfärger till mörkt tema */
 $dark-header-color: darken(#2F4156, 17%);
-$dark-background: #505050;
+$dark-background: lighten(#505050, 5%);
 $white: #fff;
-$text-background: lighten(#505050, 10%);
+$text-background: #505050;
 
 /* fonts */
 $font-stack: 'Arial', sans-serif;
