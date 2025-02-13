@@ -1,9 +1,0 @@
-/* sass discussion page */
-@use "../abstracts/mixins";
-@use "../abstracts/placeholders";
-@use "../abstracts/variables";
-
-.sass-content {
-    @include mixins.textBox(90%, 0 1rem 1rem, 1rem auto, 2px solid rgb(137, 137, 137));
-    @extend %box-shadow;
-}
