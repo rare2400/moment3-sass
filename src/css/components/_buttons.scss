@@ -23,7 +23,7 @@
 
 /* the three bars that makes the hamburger-icon */
 .bars {
-    @include mixins.menu-icon(block, 20px, 3px, variables.$light-text, 5px 0)
+    @include mixins.menu-icon(block, 20px, 3px, variables.$light-text, 5px 0);
 }
 
 .menu-text {
@@ -52,5 +52,5 @@
 
 /* knapp på index-sidan */
 .button {
-   @include mixins.button(variables.$header-color, variables.$light-text, variables.$default-padding, 0 auto, variables.$max-button, center, 1.2rem, false) 
+   @include mixins.button(variables.$header-color, variables.$light-text, variables.$default-padding, 0 auto, variables.$max-button, center, 1.2rem, false); 
 }

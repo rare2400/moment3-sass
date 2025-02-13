@@ -38,5 +38,5 @@ footer {
     background-color: variables.$header-color;
     color: variables.$light-text;
     padding: variables.$default-padding;
-    @extend %centermargin
+    @extend %centermargin;
   }
