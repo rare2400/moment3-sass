@@ -1,0 +1,83 @@
+@use "./variables";
+
+//rörelse för textskugga
+@keyframes textShadow {
+    0% {
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.398);
+    }
+
+    50% {
+        text-shadow: -8px 8px 6px rgba(0, 0, 0, 0.75);
+
+    }
+
+    100% {
+        text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.504);
+    }
+}
+
+//rörelse från vänster till mitten
+@keyframes moveIn {
+    0% {
+        transform: rotate(0deg);
+        left: -250px;
+    }
+
+    25% {
+        transform: rotate(150deg);
+        left: 0px;
+        background-color: lighten(variables.$header-color, 20%);
+    }
+
+    50% {
+        transform: rotate(300deg);
+        left: 250px;
+        background-color: lighten(variables.$header-color, 40%);
+    }
+
+    75% {
+        transform: rotate(150deg);
+        background-color: lighten(variables.$header-color, 20%);
+    }
+
+    100% {
+        transform: rotate(0deg);
+        left: 0px;               
+    }
+}
+
+//golfklubbans rörelse
+@keyframes rotateObject {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(140deg);
+    }
+
+    100% {
+        transform: rotate(-200deg);
+    }
+}
+
+//golbollens rörelse
+@keyframes moveBall {
+    from {
+        transform: translate(-190px, -30px);
+    }
+
+    to {
+        transform: translate(200px, -220px);
+    }
+}
+
+@keyframes shadowEffect {
+    0% {
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.4);
+    }
+}
