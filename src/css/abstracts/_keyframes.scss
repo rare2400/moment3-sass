@@ -1,0 +1,181 @@
+@use "./variables";
+
+//rörelse för textskugga
+@keyframes textShadow {
+    0% {
+        text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.398);
+    }
+
+    50% {
+        text-shadow: -8px 8px 6px rgba(0, 0, 0, 0.75);
+    }
+
+    100% {
+        text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.504);
+    }
+}
+
+//rörelse från vänster till mitten
+@keyframes moveIn {
+    0% {
+        transform: rotate(0deg);
+        left: -250px;
+    }
+
+    25% {
+        transform: rotate(150deg);
+        left: 0px;
+        background-color: variables.$light-blue;
+    }
+
+    50% {
+        transform: rotate(300deg);
+        left: 250px;
+        background-color: lighten(variables.$header-color, 40%);
+    }
+
+    75% {
+        transform: rotate(150deg);
+        background-color: variables.$light-blue;
+    }
+
+    100% {
+        transform: rotate(0deg);
+        left: 0px;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1) translate(-100px);
+    }
+
+    50% {
+        transform: scale(1.25) translate(0px);
+    }
+
+    100% {
+        transform: scale(1) translate(100px);
+    }
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+        background-color: variables.$red;
+    }
+
+    25% {
+        transform: translate(568px, 0);
+        background-color: variables.$yellow;
+    }
+
+    50% {
+        transform: translate(568px, 268px);
+        background-color: variables.$orange;
+    }
+
+    75% {
+        transform: translate(0, 268px);
+        background-color: variables.$yellow;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background-color: variables.$red;
+    }
+}
+
+@keyframes smallMoveAround {
+    0% {
+        transform: translate(0, 0);
+        background-color: variables.$red;
+        box-shadow: -10px 0px 11px -4px rgba(0,0,0,0.5);
+    }
+
+    25% {
+        transform: translate(288px, 0);
+        background-color: variables.$yellow;
+        box-shadow: 0px -10px 11px -4px rgba(0,0,0,0.5);
+    }
+
+    50% {
+        transform: translate(288px, 288px);
+        background-color: variables.$orange;
+        box-shadow: 10px 0px 11px -4px rgba(0,0,0,0.5);
+    }
+
+    75% {
+        transform: translate(0, 288px);
+        background-color: variables.$yellow;
+        box-shadow: 0px 10px 11px -4px rgba(0,0,0,0.5);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background-color: variables.$red;
+        box-shadow: -10px 0px 11px -4px rgba(0,0,0,0.5);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    25% {
+        background-color: variables.$red;
+        box-shadow: 0px -20px 11px -4px rgba(0,0,0,0.6);
+    }
+
+    50% {
+        background-color: variables.$yellow;
+        box-shadow: 0px 20px 11px -4px rgba(0,0,0,0.6);
+    }
+
+    100% {
+        transform: rotate(180deg);
+        background-color: variables.$orange;
+        box-shadow: 0px -20px 11px -4px rgba(0,0,0,0.6);
+    }
+}
+
+//golfklubbans rörelse
+@keyframes rotateObject {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(140deg);
+    }
+
+    50% {
+        transform: rotate(-200deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+//golbollens rörelse
+@keyframes moveBall {
+    0% {
+        transform: translate(-190px, -30px);
+    }
+
+    100% {
+        transform: translate(50rem, -220px) rotate(-1000deg);
+    }
+}
+
+@keyframes shadowEffect {
+    0% {
+        box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+    }
+
+    100% {
+        box-shadow: 0px 0px 20px 10px rgba(0, 0, 0, 0.4);
+    }
+}

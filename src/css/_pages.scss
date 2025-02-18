@@ -1,0 +1,27 @@
+@use "./abstracts/variables";
+@use "./abstracts/placeholders";
+@use "./abstracts/mixins";
+@use "./abstracts/keyframes";
+
+/* index-page styles */
+.images {
+    @extend %box-shadow;
+    width: 80%;
+    margin: 0 auto 0.8rem;
+}
+
+.image-box {
+    @extend %centermargin;
+
+    p {
+        @extend .images;
+        box-shadow: none;
+        text-align: left;
+    }
+}
+
+/* sass discussion page */
+.sass-content {
+    @include mixins.textBox(90%, 0 1rem 1rem, 1rem auto, 2px solid rgb(137, 137, 137));
+    @extend %box-shadow;
+}

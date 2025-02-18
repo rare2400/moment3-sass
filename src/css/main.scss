@@ -2,18 +2,20 @@
 @use "./abstracts/mixins";
 @use "./abstracts/placeholders";
 @use "./abstracts/variables";
+@use "./abstracts/keyframes";
 
 /* base */
-@use "./base/base";
+@use "base";
 
 /* components */
-@use "./components/buttons"; 
+@use "buttons"; 
 
 /* layout */
 @use "./layout/layout";
 @use "./layout/mediaqueries";
 
-
 /* pages */
-@use "./pages/index";
-@use "./pages/SASS";
+@use "pages";
+
+/* animations */
+@use "animations";
