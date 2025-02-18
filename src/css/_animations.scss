@@ -16,7 +16,7 @@
 
 //style för textbox som rullar in på sidan
 .box {
-    @include mixins.button(variables.$header-color, variables.$white, 2rem, 3rem auto, 60%, center, 2rem, false);
+    @include mixins.button(variables.$header-color, variables.$white, 2rem, 3rem auto, 20rem, center, 2rem, false);
     position: relative;
     animation: moveIn 4s forwards linear;
     cursor: pointer;
