@@ -1,0 +1,130 @@
+@use "./abstracts/variables";
+@use "./abstracts/mixins";
+@use "./abstracts/keyframes";
+
+/* animation page */
+#A-h2 {
+    animation: textShadow 6s 4s forwards linear;
+}
+
+.animation-container {
+    max-width: 60rem;
+    margin: 0 auto;
+    position: relative;
+}
+
+.box {
+    @include mixins.button(variables.$header-color, variables.$white, 2rem, 3rem auto, 60%, center, 2rem, false);
+    position: relative;
+    border-radius: 2rem;
+    animation: moveIn 4s forwards linear;
+    cursor: pointer;
+    z-index: 1;
+
+    &:hover {
+        background-color: variables.$dark-header-color;
+    }
+
+    p {
+        animation: textShadow 6s 4s forwards linear;
+        font-weight: 700;
+    }
+}
+
+#flower-image {
+    text-align: center;
+    overflow: hidden;
+    background-color: variables.$orange;
+
+    .sunflower {
+        animation: zoomIn 5s infinite alternate linear;
+    }
+}
+
+.circle-container {
+    width: 20rem;
+    height: 20rem;
+    margin: 2rem auto;
+    border: 1px solid transparent;
+
+    .circle {
+        display: block;
+        width: 2rem;
+        aspect-ratio: 1 / 1;
+        position: absolute;
+        border-radius: 50%;
+        animation: smallMoveAround 10s 4s infinite;
+    }
+
+    p {
+        @include mixins.button(variables.$light-blue, variables.$light-text, 0.8rem, 7rem auto, 180px, center, 1rem, false);
+        animation: rotation 6s 4s infinite alternate linear;
+    }
+}
+
+.golfball,
+.golfclub,
+.a-btn {
+    display: none;
+}
+
+/* Media queries for larger screens */
+@media (min-width: variables.$breakpoint) {
+    .animation-container {
+        border: 2px solid variables.$header-color;
+    }
+
+    #flower-image {
+        max-width: 80%;
+        margin: 0 auto;
+
+    }
+
+    .circle-container {
+        width: 37.5rem !important;
+        height: 18.75rem !important;
+
+        .circle {
+            animation: moveAround 10s 4s infinite !important;
+        }
+    }
+
+    .golf-animation {
+        @include mixins.textBox(80%, 1rem, 2rem auto);
+        background-color: lighten(variables.$header-color, 40%);
+        text-align: center;
+        animation: shadowEffect 3s infinite alternate;
+
+        .golfclub,
+        .golfball {
+            animation: none;
+            display: inline;
+        }
+
+        .golfball {
+            transform: translate(-190px, -30px);
+        }
+
+        &.animate {
+            .golfclub {
+                animation: rotateObject 8s backwards linear;
+            }
+
+            .golfball {
+                animation: moveBall 3s 2.8s forwards linear;
+            }
+        }
+    }
+
+    .a-btn {
+        display: block !important;
+        @include mixins.button(variables.$header-color, variables.$light-text, 1rem 2rem, 2rem auto, 70%, center, 1.2rem, false);
+        transform: scale(1);
+        transition: transform 1s ease, background-color 1s ease;
+    
+        &:hover {
+            transform: scale(1.25);
+            background-color: lighten(variables.$header-color, 40%);
+        }
+    }
+}
