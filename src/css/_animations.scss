@@ -7,46 +7,55 @@
     animation: textShadow 6s 4s forwards linear;
 }
 
+//container som innehåller alla animationer
 .animation-container {
     max-width: 60rem;
     margin: 0 auto;
     position: relative;
 }
 
+//style för textbox som rullar in på sidan
 .box {
     @include mixins.button(variables.$header-color, variables.$white, 2rem, 3rem auto, 60%, center, 2rem, false);
     position: relative;
-    border-radius: 2rem;
     animation: moveIn 4s forwards linear;
     cursor: pointer;
     z-index: 1;
+    transition: 1s ease;
 
+    //hovereffekt med transition
     &:hover {
         background-color: variables.$dark-header-color;
+        border-radius: 2rem;
     }
 
+    //animering för text-skugga på text i rutan
     p {
         animation: textShadow 6s 4s forwards linear;
         font-weight: 700;
     }
 }
 
+//behållaren av bilden med solrosen
 #flower-image {
     text-align: center;
     overflow: hidden;
     background-color: variables.$orange;
 
+    //animering som zoomer och flyttar solrosen från sida till sida
     .sunflower {
         animation: zoomIn 5s infinite alternate linear;
     }
 }
 
+//container som cirkeln åker runt i
 .circle-container {
     width: 20rem;
     height: 20rem;
     margin: 2rem auto;
     border: 1px solid transparent;
 
+    //cirkeln som rör sig i en fyrkant runt en textbox
     .circle {
         display: block;
         width: 2rem;
@@ -56,12 +65,14 @@
         animation: smallMoveAround 10s 4s infinite;
     }
 
+    //textbox som snurrar och byter fär
     p {
         @include mixins.button(variables.$light-blue, variables.$light-text, 0.8rem, 7rem auto, 180px, center, 1rem, false);
         animation: rotation 6s 4s infinite alternate linear;
     }
 }
 
+//tar bort golf-animeringsinnehållet för små skärmar
 .golfball,
 .golfclub,
 .a-btn {
@@ -70,41 +81,49 @@
 
 /* Media queries for larger screens */
 @media (min-width: variables.$breakpoint) {
+    //lägger till border för containern med animeringar
     .animation-container {
         border: 2px solid variables.$header-color;
     }
 
+    //centrerar container med solros-bilden
     #flower-image {
         max-width: 80%;
         margin: 0 auto;
 
     }
 
+    //ändrar storleken på rektangeln som cirkeln åker runt i
     .circle-container {
         width: 37.5rem !important;
         height: 18.75rem !important;
 
+        //anpassar animering till den större rektangeln
         .circle {
             animation: moveAround 10s 4s infinite !important;
         }
     }
 
+    //style för golfanimeringens container
     .golf-animation {
         @include mixins.textBox(80%, 1rem, 2rem auto);
         background-color: lighten(variables.$header-color, 40%);
         text-align: center;
         animation: shadowEffect 3s infinite alternate;
 
+        //default att animeringen är avstängd
         .golfclub,
         .golfball {
             animation: none;
             display: inline;
         }
 
+        //flyttar golfbollen så när golfklubban som möjligt
         .golfball {
             transform: translate(-190px, -30px);
         }
 
+        //lägger till animate när knappen trycks (genom js)
         &.animate {
             .golfclub {
                 animation: rotateObject 8s backwards linear;
@@ -116,6 +135,7 @@
         }
     }
 
+    //knapp som gör att golfanimationen startar och transition för hover-effekt
     .a-btn {
         display: block !important;
         @include mixins.button(variables.$header-color, variables.$light-text, 1rem 2rem, 2rem auto, 70%, center, 1.2rem, false);
