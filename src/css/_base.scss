@@ -12,6 +12,7 @@ body {
     background-color: variables.$background-color;
     font-family: variables.$font-stack;
     line-height: 1.5rem;
+    overflow-x: hidden;
 }
 
 h1 {
