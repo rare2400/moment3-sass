@@ -8,7 +8,6 @@
 
     50% {
         text-shadow: -8px 8px 6px rgba(0, 0, 0, 0.75);
-
     }
 
     100% {
@@ -26,7 +25,7 @@
     25% {
         transform: rotate(150deg);
         left: 0px;
-        background-color: lighten(variables.$header-color, 20%);
+        background-color: variables.$light-blue;
     }
 
     50% {
@@ -37,12 +36,103 @@
 
     75% {
         transform: rotate(150deg);
-        background-color: lighten(variables.$header-color, 20%);
+        background-color: variables.$light-blue;
     }
 
     100% {
         transform: rotate(0deg);
-        left: 0px;               
+        left: 0px;
+    }
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(1)
+    }
+
+    100% {
+        transform: scale(1.25);
+    }
+}
+
+@keyframes moveAround {
+    0% {
+        transform: translate(0, 0);
+        background-color: variables.$red;
+    }
+
+    25% {
+        transform: translate(568px, 0);
+        background-color: variables.$yellow;
+    }
+
+    50% {
+        transform: translate(568px, 268px);
+        background-color: variables.$orange;
+    }
+
+    75% {
+        transform: translate(0, 268px);
+        background-color: variables.$yellow;
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background-color: variables.$red;
+    }
+}
+
+@keyframes smallMoveAround {
+    0% {
+        transform: translate(0, 0);
+        background-color: variables.$red;
+        box-shadow: -10px 0px 11px -4px rgba(0,0,0,0.5);
+    }
+
+    25% {
+        transform: translate(288px, 0);
+        background-color: variables.$yellow;
+        box-shadow: 0px -10px 11px -4px rgba(0,0,0,0.5);
+    }
+
+    50% {
+        transform: translate(288px, 288px);
+        background-color: variables.$orange;
+        box-shadow: 10px 0px 11px -4px rgba(0,0,0,0.5);
+    }
+
+    75% {
+        transform: translate(0, 288px);
+        background-color: variables.$yellow;
+        box-shadow: 0px 10px 11px -4px rgba(0,0,0,0.5);
+    }
+
+    100% {
+        transform: translate(0, 0);
+        background-color: variables.$red;
+        box-shadow: -10px 0px 11px -4px rgba(0,0,0,0.5);
+    }
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(-360deg);
+    }
+
+    25% {
+        background-color: variables.$red;
+        box-shadow: 0px -20px 11px -4px rgba(0,0,0,0.6);
+    }
+
+    50% {
+        background-color: variables.$yellow;
+        box-shadow: 0px 20px 11px -4px rgba(0,0,0,0.6);
+    }
+
+    100% {
+        transform: rotate(180deg);
+        background-color: variables.$orange;
+        box-shadow: 0px -20px 11px -4px rgba(0,0,0,0.6);
     }
 }
 
@@ -56,19 +146,23 @@
         transform: rotate(140deg);
     }
 
-    100% {
+    50% {
         transform: rotate(-200deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
     }
 }
 
 //golbollens rörelse
 @keyframes moveBall {
-    from {
+    0% {
         transform: translate(-190px, -30px);
     }
 
-    to {
-        transform: translate(200px, -220px);
+    100% {
+        transform: translate(30rem, -220px) rotate(-1000deg);
     }
 }
 
