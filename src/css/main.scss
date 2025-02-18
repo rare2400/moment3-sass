@@ -2,6 +2,7 @@
 @use "./abstracts/mixins";
 @use "./abstracts/placeholders";
 @use "./abstracts/variables";
+@use "./abstracts/keyframes";
 
 /* base */
 @use "base";
@@ -15,3 +16,6 @@
 
 /* pages */
 @use "pages";
+
+/* animations */
+@use "animations";
