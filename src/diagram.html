@@ -7,6 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="stylesheet" href="css/main.scss">
     <script src="js/main.js" type="module"></script>
+    <script src="js/chart.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js"></script>
     <title>Diagram</title>
 </head>
 
@@ -43,8 +45,18 @@
             </nav>
         </header>
         <main>
-            <section class="sass-content">
-                <h2>Moment 5</h2>
+            <h2>Moment 5 - diagram</h2>
+            <section id="diagram">
+                <h3>Stapeldiagram</h3>
+                <div id="small-container">
+                    <div id="bar">
+                        <canvas id="barChart"></canvas> 
+                    </div>
+                    <h3>Cirkeldiagram</h3>
+                    <div id="circle">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
             </section>
         </main>
         <footer>
