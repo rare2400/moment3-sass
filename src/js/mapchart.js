@@ -119,3 +119,31 @@ function createPieChart(programs) {
         }
     });
 }
+
+
+
+/* moment 5 - Frontend-baserad utveckling DT211G
+Av Ramona Reinholdz, rare2400 */
+
+"use strict";
+
+
+/**
+ * initierar leaflet-kartan med en startvy över Sverige
+ * @constant {L.Map}
+ */
+const map = L.map('map').setView([59.8581306, 17.6335778], 5);
+
+/**
+ * läggre till OpenStreetmap-lager på kartan
+ * @constant {L.tileLayer}
+ */
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
+
+/**
+ * skapar markör på kartan på startvyn
+ * @constant {L.marker}
+ */
+let marker = L.marker([59.8581306, 17.6335778]).addTo(map);
