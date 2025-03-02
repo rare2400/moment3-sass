@@ -104,7 +104,7 @@ function createBarDiagram(courses) {
 function createPieChart(programs) {
     const ctx = document.getElementById('pieChart').getContext('2d');
     new Chart(ctx, {
-        type: 'pie',
+        type: 'polarArea',
         data: {
             labels: programs.map(program => program.name),
             datasets: [{
@@ -119,14 +119,6 @@ function createPieChart(programs) {
         }
     });
 }
-
-
-
-/* moment 5 - Frontend-baserad utveckling DT211G
-Av Ramona Reinholdz, rare2400 */
-
-"use strict";
-
 
 /**
  * initierar leaflet-kartan med en startvy över Sverige
