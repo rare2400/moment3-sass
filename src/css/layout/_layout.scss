@@ -16,7 +16,7 @@ nav {
     background-color: variables.$header-color;
     width: 100%;
     display: none;
-    z-index: 2;
+    z-index: 10000;
   
     ul {
       text-align: center;
