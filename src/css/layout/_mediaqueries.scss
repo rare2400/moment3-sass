@@ -66,6 +66,17 @@
         width: 60%;
         margin: 1rem auto;
     }
+
+    /* map */
+    #searchForm {
+        max-width: 40rem;
+        grid-column: 90% 10%;
+
+        button {
+            margin: 0;
+            width: 4rem;
+        }
+    }
 }
 
 /* media queries för mörkt tema */
