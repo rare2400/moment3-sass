@@ -25,3 +25,61 @@
     @include mixins.textBox(90%, 0 1rem 1rem, 2rem auto, 2px solid rgb(137, 137, 137));
     @extend %box-shadow;
 }
+
+/* diagram */
+#diagram {
+    @include mixins.textBox(90%, 1rem, 2rem auto, 0);
+    @extend %box-shadow;
+    background-color: variables.$white;
+    
+    #barChart {
+        height: 20rem;
+    }
+
+    #bar,
+    #circle {
+        width: 80%;
+        margin: 1rem auto;
+    }
+}
+
+/* map */
+.map-content{
+    @extend %diagram !optional;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#map {
+    height: 400px;
+    @extend %box-shadow;
+    margin-bottom: 3rem;
+}
+
+#searchForm {
+    display: grid;
+    grid-template-columns: 80% 20%;
+    margin: 2rem auto;
+    padding: 0 1rem;
+
+    label {
+        width: 100%;
+        text-align: left;
+        grid-column: 1/3;
+    }
+
+    input {
+        width: 100%;
+        height: 1.8rem;
+        border-radius: 0.375rem;
+        border: 1px solid variables.$header-color;
+        grid-row: 2;  
+    }
+
+    button {
+        @include mixins.button(variables.$header-color, variables.$white, 0 1rem, 0 0 0 auto, 4rem, center, 0.8rem, false);
+        border-radius: 0.375rem;
+        grid-row: 2;
+    }
+}

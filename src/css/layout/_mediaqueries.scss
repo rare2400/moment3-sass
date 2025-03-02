@@ -56,6 +56,16 @@
         max-width: variables.$breakpoint;
         padding: 1rem 3rem;
     }
+
+    /* diagram-page */
+    #diagram {
+        max-width: 60rem;
+    }
+
+    #pieChart {
+        width: 60%;
+        margin: 1rem auto;
+    }
 }
 
 /* media queries för mörkt tema */
