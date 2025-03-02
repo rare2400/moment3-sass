@@ -54,7 +54,7 @@
 #map {
     height: 400px;
     @extend %box-shadow;
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 #searchForm {
@@ -83,5 +83,14 @@
         @include mixins.button(variables.$header-color, variables.$white, 0 1rem, 0 0 0 auto, 4rem, center, 0.8rem, false);
         border-radius: 0.375rem;
         grid-row: 2;
+    }
+}
+
+/* jsdoc-link */
+.doc {
+    @include mixins.button(variables.$header-color, variables.$white, 0.5rem 2rem, 0 auto, 10rem, center, 0.8rem, false);
+
+    a {
+        color: variables.$white;
     }
 }
