@@ -147,3 +147,73 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
  * @constant {L.marker}
  */
 let marker = L.marker([59.8581306, 17.6335778]).addTo(map);
+
+/**
+ * Hämtar koordinater från Nominatim API baserat på en sökfras.
+ * @param {string} query - Platsen som användaren söker efter.
+ * @returns {Promise<{lat: string, lon: string}>} - Returnerar latitud och longitud.
+ * @throws {Error} - Om platsen inte hittas/API-anropet misslyckas
+ */
+async function getCoordinates(query) {
+    const url = `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}`;
+    
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        
+        if (data.length === 0) {
+            throw new Error('Platsen hittades inte.');
+        }
+        
+        return { lat: data[0].lat, lon: data[0].lon };
+    } catch (error) {
+        console.error('Fel vid hämtning av koordinater:', error);
+        alert('Platsen kunde inte hittas. Försök igen!');
+    }
+}
+
+/**
+ * Eventlyssnare för sökformuläret vid tryck på "sök"-knappen
+ * @event submit
+ * @listens document.getElementById#searchform:submit
+ */
+document.getElementById('searchForm').addEventListener('submit', searchQuery);
+
+/**
+ * Hämtar sökningen från input-fältet
+ * @returns {string}
+ */
+function getSearchInput() {
+  return document.getElementById('searchInput').value.trim();
+}
+
+/**
+ * Eventlyssnare för formuläret när man skriver in en plats och trycker på "sök"
+ * @param {Event} event -Sökningen från formuläret
+ * @returns {Promise<void>}
+ */
+async function searchQuery(event) {
+  //förhindar laddning av sidan
+    event.preventDefault();
+
+    const inputValue = getSearchInput();
+    
+    //alert om att en plats behöver fyllas i
+    if (inputValue.trim() === '') {
+        alert('Skriv in en plats att söka efter.');
+        return;
+    }
+
+    // Hämta koordinater och uppdatera kartan/markören
+    const coords = await getCoordinates(inputValue);
+    
+    if (coords) {
+        const { lat, lon } = coords;
+
+        // Flytta kartan till den nya platsen
+        map.setView([lat, lon], 12);
+
+        // Uppdatera markörens position
+        marker.setLatLng([lat, lon]);
+    }
+};
