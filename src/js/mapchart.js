@@ -203,7 +203,7 @@ async function searchQuery(event) {
         const { lat, lon } = coords;
 
         // Flytta kartan till den nya platsen
-        map.setView([lat, lon], 12);
+        map.setView([lat, lon], 16);
 
         // Uppdatera markörens position
         marker.setLatLng([lat, lon]);
